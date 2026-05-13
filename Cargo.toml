@@ -1,0 +1,13 @@
+[package]
+name = "smart-road"
+version = "0.1.0"
+edition = "2021"
+description = "Smart intersection simulation for autonomous vehicles (no traffic lights)"
+
+[dependencies]
+# "bundled" compiles and links SDL2 from source (no system SDL2.lib / LIB paths on Windows).
+# Requires CMake + a C compiler (e.g. MSVC Build Tools). See README.
+sdl2 = { version = "0.36", features = ["bundled"] }
+rand = "0.8"
+font8x8 = "0.3.1"
+image = "0.25.10"
