@@ -1,0 +1,4 @@
+# CMake 4+ (e.g. VS 2026): bundled SDL2 in sdl2-sys ships older CMakeLists; this env var
+# is the supported fix (see https://cmake.org/cmake/help/latest/envvar/CMAKE_POLICY_VERSION_MINIMUM.html).
+[env]
+CMAKE_POLICY_VERSION_MINIMUM = "3.5"

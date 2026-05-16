@@ -33,7 +33,7 @@ This file tracks steps and optional improvements relative to the mandatory objec
 5. Main loop, keyboard input, spawn cooldown, R-held random spawn.
 6. Simple rendering (intersection + vehicles).
 7. Stats collection and stats window on Esc (**bitmap text** via `font8x8`, no SDL2_ttf).
-8. **`.cargo/config.toml`**: `CMAKE_POLICY_VERSION_MINIMUM=3.5` for CMake 4+ when building bundled SDL2.
+8. **`.cargo/config.toml`** (tracked in repo): `CMAKE_POLICY_VERSION_MINIMUM=3.5` for CMake 4+ when building bundled SDL2 — without it, `cargo build` can fail on newer VS/CMake while older laptops still work.
 9. **Route l/r vs turns**: Fixed `exit_direction` for South/East/West (left/right turns were swapped vs right-hand traffic). Fixed North inbound `lateral_offset_approach` so lane labels r/s/l match left vs right turn paths (objectives diagram).
 10. **E/W exit lanes**: Swapped `lateral_offset_exit` for East and West so right-turn / left-turn routes use the correct outbound lane (e.g. South `r` → East stays in the right lane).
 11. **North r/l exit alignment**: `lateral_offset_exit_for_path` — North `r` (left) exits westbound lane 0 (north); North `l` (right) exits eastbound **left** lane (north / inner), not the right lane.
