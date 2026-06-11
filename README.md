@@ -55,6 +55,22 @@ cargo build
 cargo run
 ```
 
+### Clean build and temp files
+
+Removes `target/` (via `cargo clean`) plus Python cache and other local junk:
+
+```powershell
+# PowerShell (project root)
+.\scripts\clean.ps1
+```
+
+```bash
+# Git Bash / Linux / macOS
+./scripts/clean.sh
+```
+
+Rust-only (no extra temp cleanup): `cargo clean`
+
 On the first build, compiling SDL2 can take **1–3 minutes**. Later builds are fast.
 
 Statistics are printed in the **console** when you press Esc; a **stats window** also opens with the same information (bitmap text).
